@@ -22,9 +22,9 @@ $(document).ready(function(){
 
     // make a dancer with a random position
 
-    var dancer = new WobblyVic(
-      $("body").height() * Math.random() * 0.85,
-      $("body").width() * Math.random() * 0.85,
+    var dancer = new dancerMakerFunction(
+      $("body").height() * Math.random() * 0.75,
+      $("body").width() * Math.random() * 0.75,
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
