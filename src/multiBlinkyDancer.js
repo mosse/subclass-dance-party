@@ -2,6 +2,7 @@ var MultiBlinkyDancer = function(top, left, timeBetweenSteps){
 
   //this.oldStep = Dancer.prototype.step;
   BlinkyDancer.call(this, top, left, timeBetweenSteps);
+  this.multiColor();
   // this.$node = $('<span class="multidancer"></span>');
 };
 
@@ -20,7 +21,8 @@ MultiBlinkyDancer.prototype.constructor = MultiBlinkyDancer;
 
 
 MultiBlinkyDancer.prototype.multiColor = function(){
-  // var randomColor = Math.floor(Math.random()*16777215).toString(16);
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+console.log(randomColor);
   // // this.styleSettings = {
   // //   border: 10px solid yellow;
   // // };
@@ -28,4 +30,5 @@ MultiBlinkyDancer.prototype.multiColor = function(){
   // //
   // this.$node.setAttribute(class, 'multidancer');
   // this.$node.css(this.styleSettings);
+  this.$node.css("border", "10px solid #" + randomColor);
 };
