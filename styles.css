@@ -31,3 +31,10 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.vic {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-image: url("V.I.C._Wobble.jpg") ;
+  background-size: 100% 100%;
+}

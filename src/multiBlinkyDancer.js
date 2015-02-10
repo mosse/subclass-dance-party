@@ -30,5 +30,7 @@ console.log(randomColor);
   // //
   // this.$node.setAttribute(class, 'multidancer');
   // this.$node.css(this.styleSettings);
-  this.$node.css("border", "10px solid #" + randomColor);
+  //
+
+  this.$node.css({"border-radius": "50px", opacity: 0.6, "border": "50px solid #" + randomColor});
 };
