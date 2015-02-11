@@ -23,10 +23,11 @@ $(document).ready(function(){
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random() * 0.75,
-      $("body").width() * Math.random() * 0.75,
+      $("body").height()/2 * Math.random() + $("body").height()*0.28,
+      $("body").width() * Math.random() * 0.9 + $("body").width() * 0.03,
       Math.random() * 1000
     );
+
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });
@@ -35,21 +36,14 @@ $(document).ready(function(){
     Dancer.prototype.middleSchoolMode();
   });
 
+  $("body").delegate(".vic", "mouseover", function(){
+    console.log("inside mouseover");
+    $(this).removeClass("wobble").addClass("flip");
+  });
 
-$("body").delegate(".vic", "mouseover", function(){
-  console.log("inside mouseover");
-  $(this).removeClass("wobble").addClass("flip");
-});
-
-$("body").delegate(".vic", "mouseout", function(){
-  console.log("inside mouseover");
-  $(this).removeClass("flip").addClass("wobble");
-});
-
-  // $(".vic").mouseover(function() {
-  //   console.log("inside mouseover");
-  //    $(this).removeClass("wobble").addClass("flip");
-  // });
-
+  $("body").delegate(".vic", "mouseout", function(){
+    console.log("inside mouseover");
+    $(this).removeClass("flip").addClass("wobble");
+  });
 });
 
