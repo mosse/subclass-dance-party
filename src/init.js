@@ -36,5 +36,20 @@ $(document).ready(function(){
   });
 
 
+$("body").delegate(".vic", "mouseover", function(){
+  console.log("inside mouseover");
+  $(this).removeClass("wobble").addClass("flip");
+});
+
+$("body").delegate(".vic", "mouseout", function(){
+  console.log("inside mouseover");
+  $(this).removeClass("flip").addClass("wobble");
+});
+
+  // $(".vic").mouseover(function() {
+  //   console.log("inside mouseover");
+  //    $(this).removeClass("wobble").addClass("flip");
+  // });
+
 });
 

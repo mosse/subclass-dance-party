@@ -32,8 +32,8 @@ body, a:link, a:visited, a:active{
   position:absolute;
 }
 .vic {
-  width: 130px;
-  height: 200px;
+  width: 260px;
+  height: 400px;
   position: absolute;
   background-image: url("V.I.C._Wobble.png") ;
   background-size: 100% 100%;
